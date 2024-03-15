@@ -239,7 +239,7 @@ void systemStats() {
     }
 
     //always check if there is an item inside the lid
-    if (itemInserted) {
+    if (itemInserted && !storageCompartFull) {
         machineState = 0;
         itemInsertionElapsed = currentTime;
     } else {
