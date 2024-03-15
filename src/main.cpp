@@ -41,29 +41,28 @@ struct pinsMaps
     /* Sensor Modules */
 
     //[triggerPin, echoPin]
-     int BStorageFillLD[2];
-     int PnlStorageFillLD[2];
-     int penStorageFillLD[2];
+     int BStorageFillLD[2] = {6, 5};
+     int PnlStorageFillLD[2] = {25, 24};
+     int penStorageFillLD[2] = {27, 26};
 
     //Lid sensors
-     int bottleDetector[2]; // Trigger and Echo
-     int weightSensor[2]; // DT and SCK
-     int transparencyDetector;
+     int bottleDetector[2] = {3, 4}; // Trigger and Echo
+     int weightSensor[2] = {12, 11}; // DT and SCK
+     int transparencyDetector = 2;
 
 
      /* Mechanical Modules */
-     int lidServo;
-     int pencilDispenser;
-     int penDispenser;
-     int releaseReward;
+     int lidServo = 7;
+     int pencilDispenser = 8;
+     int penDispenser = 9;
+     int releaseReward = 10;
 
 
      /* Display/Control Modules */
-     int LCDI2C[2]; // [0]SDA, [1]SCL
-     int LED[2]; // [0] Red, [1] Green
-     int BTTN1;
-     int BTTN2;
-    
+     int LCDI2C[2] = {20, 21}; // [0]SDA, [1]SCL
+     int LED[2] = {15, 14}; // [0] Red, [1] Green
+     int BTTN1 = 16;
+     int BTTN2 = 17;
 };
 
 /* This data structure contains the timing this is used to efficently time sensor data/ operations to cycles.
