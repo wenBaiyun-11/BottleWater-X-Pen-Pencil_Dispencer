@@ -228,6 +228,7 @@ void systemStats() {
         }
         delay(80);
     }
+    rewardBTTNStatePrev[0] = rewardBTTNState[0];
 
     //If Pencil button is pressed
     if (rewardBTTNState[1] != rewardBTTNStatePrev[0]){
@@ -237,6 +238,7 @@ void systemStats() {
         }
         delay(80);
     }
+    rewardBTTNStatePrev[1] = rewardBTTNState[1];
 
     //always check if there is an item inside the lid
     if (itemInserted && !storageCompartFull) {
